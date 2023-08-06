@@ -11,7 +11,7 @@ const scan = async (req, res) => {
     headers: {
       accept: "application/json",
       "content-type": "application/x-www-form-urlencoded",
-      "x-apikey": process.env._API_KEY,
+      "x-apikey": process.env.API_KEY,
     },
     data: encodedParams,
   };
@@ -33,7 +33,7 @@ const getReport = async (req, res) => {
     url: `https://www.virustotal.com/api/v3/analyses/${id}`,
     headers: {
       accept: "application/json",
-      "x-apikey": process.env._API_KEY,
+      "x-apikey": process.env.API_KEY,
     },
   };
 

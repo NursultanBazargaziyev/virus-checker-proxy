@@ -7,10 +7,11 @@ app.use(express.json());
 
 app.get("/scan", scan);
 app.get("/report/:id", getReport);
+const port = process.env.PORT || 8080;
 
 const main = () => {
   try {
-    app.listen(process.env._PORT || 8080, () => {
+    app.listen(port, () => {
       console.log("Server works");
     });
   } catch (error) {
