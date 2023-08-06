@@ -10,7 +10,7 @@ app.get("/report/:id", getReport);
 
 const main = () => {
   try {
-    app.listen(process.env.PORT || 8080, () => {
+    app.listen(process.env._PORT || 8080, () => {
       console.log("Server works");
     });
   } catch (error) {
